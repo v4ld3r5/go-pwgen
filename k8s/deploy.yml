@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pwgen
+spec:
+  selector:
+    matchLabels:
+      run: pwgen
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: pwgen
+    spec:
+      containers:
+      - name: pwgen
+        image: example/pwgen
+        ports:
+        - containerPort: 8080
