@@ -39,7 +39,7 @@ From a different terminal, you can use `curl` to send a `POST` request. The data
 
 Example:
 
-```json
+```bash
 curl -s http://localhost:8080/pwgen \
 -H "Content-Type: application/json" -X POST \
 --data '{"minLen":8, "schar":1, "nchar":2, "num":4}' | jq
